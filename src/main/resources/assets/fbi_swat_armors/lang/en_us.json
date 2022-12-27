@@ -1,13 +1,13 @@
 {
-  "itemGroup.fbi_swat_armors.fbi_swat_armors": "§2FBI §4And §rSwat §4Armors",
-  "item.fbi_swat_armors.sunglasses": "Sunglasses",
-  "item.fbi_swat_armors.fbi_jacket": "FBI Jacket",
-  "item.fbi_swat_armors.fbi_blue_jacket": "FBI Blue Trousers",
-  "item.fbi_swat_armors.shoes": "Shoes",
-  "item.fbi_swat_armors.fbi_helmet": "FBI Helmet",
-  "item.fbi_swat_armors.fbi_bulletproof_vest": "FBI Bulletproof Vest",
-  "item.fbi_swat_armors.fbi_green_trousers": "FBI Green Trousers",
-  "item.fbi_swat_armors.swat_helmet": "SWAT Helmet",
-  "item.fbi_swat_armors.swat_bulletproof_vest": "SWAT Bulletproof Vest",
-  "item.fbi_swat_armors.swat_trousers": "SWAT Trousers"
+  "itemGroup.fbi_swat_armors.fbi_swat_armors": "§EFBI §BAnd §FSwat §BArmors",
+  "item.fbi_swat_armors.sunglasses": "§8Sunglasses",
+  "item.fbi_swat_armors.fbi_jacket": "§EFBI §1Jacket",
+  "item.fbi_swat_armors.fbi_blue_trousers": "§EFBI §1Blue Trousers",
+  "item.fbi_swat_armors.shoes": "§8Shoes",
+  "item.fbi_swat_armors.fbi_helmet": "§EFBI §2Helmet",
+  "item.fbi_swat_armors.fbi_bulletproof_vest": "§EFBI §2Bulletproof Vest",
+  "item.fbi_swat_armors.fbi_green_trousers": "§EFBI §2Green Trousers",
+  "item.fbi_swat_armors.swat_helmet": "SWAT §1Helmet",
+  "item.fbi_swat_armors.swat_bulletproof_vest": "SWAT §1Bulletproof Vest",
+  "item.fbi_swat_armors.swat_trousers": "SWAT §1Trousers"
 }
