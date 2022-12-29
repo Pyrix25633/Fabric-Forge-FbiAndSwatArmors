@@ -2,7 +2,6 @@ package net.rupyber_studios.fbi_swat_armors;
 
 import net.fabricmc.api.ModInitializer;
 import net.rupyber_studios.fbi_swat_armors.item.ModItems;
-import net.rupyber_studios.fbi_swat_armors.util.ModRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib3.GeckoLib;
@@ -24,7 +23,6 @@ public class FbiSwatArmors implements ModInitializer {
 		ModItems.registerModItems();
 
 		GeckoLib.initialize();
-
 
 		LOGGER.info("Hello Fabric world!");
 	}
