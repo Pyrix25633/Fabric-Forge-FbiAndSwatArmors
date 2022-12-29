@@ -1,0 +1,20 @@
+{
+  "key": {
+    "#": {
+      "item": "create:sturdy_sheet"
+    },
+    "G": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "#G#",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "fbi_swat_armors:fbi_bulletproof_vest"
+  },
+  "type": "minecraft:crafting_shaped",
+  "group": "fbi1"
+}

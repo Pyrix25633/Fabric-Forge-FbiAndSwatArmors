@@ -27,19 +27,19 @@ public class ModItems {
             new Fbi0Item(ArmorMaterials.IRON, EquipmentSlot.FEET,
                     settings));
     public static final Item FBI_HELMET = registerItem("fbi_helmet",
-            new Fbi1Item(ArmorMaterials.IRON, EquipmentSlot.HEAD,
+            new Fbi1Item(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD,
                     settings));
     public static final Item FBI_BULLETPROOF_VEST = registerItem("fbi_bulletproof_vest",
-            new Fbi1Item(ArmorMaterials.IRON, EquipmentSlot.CHEST,
+            new Fbi1Item(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST,
                     settings));
     public static final Item FBI_GREEN_TROUSERS = registerItem("fbi_green_trousers",
             new Fbi1Item(ArmorMaterials.IRON, EquipmentSlot.LEGS,
                     settings));
     public static final Item SWAT_HELMET = registerItem("swat_helmet",
-            new Swat1Item(ArmorMaterials.IRON, EquipmentSlot.HEAD,
+            new Swat1Item(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD,
                     settings));
     public static final Item SWAT_BULLETPROOF_VEST = registerItem("swat_bulletproof_vest",
-            new Swat1Item(ArmorMaterials.IRON, EquipmentSlot.CHEST,
+            new Swat1Item(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST,
                     settings));
     public static final Item SWAT_TROUSERS = registerItem("swat_trousers",
             new Swat1Item(ArmorMaterials.IRON, EquipmentSlot.LEGS,

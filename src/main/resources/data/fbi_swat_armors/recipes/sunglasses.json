@@ -1,0 +1,17 @@
+{
+  "key": {
+    "#": {
+      "item": "minecraft:black_stained_glass_pane"
+    },
+    "X": {
+      "item": "create:iron_sheet"
+    }
+  },
+  "pattern": [
+    "#X#"
+  ],
+  "result": {
+    "item": "fbi_swat_armors:sunglasses"
+  },
+  "type": "minecraft:crafting_shaped"
+}

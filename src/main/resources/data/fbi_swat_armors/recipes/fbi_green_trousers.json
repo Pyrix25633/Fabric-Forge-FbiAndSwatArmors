@@ -1,0 +1,23 @@
+{
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "create:iron_sheet"
+    },
+    "G": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#G#",
+    "X X"
+  ],
+  "result": {
+    "item": "fbi_swat_armors:fbi_green_trousers"
+  },
+  "type": "minecraft:crafting_shaped",
+  "group": "fbi1"
+}

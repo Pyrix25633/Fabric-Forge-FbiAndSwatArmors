@@ -1,0 +1,22 @@
+{
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "create:iron_sheet"
+    },
+    "B": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "pattern": [
+    "B B",
+    "# #",
+    "X X"
+  ],
+  "result": {
+    "item": "fbi_swat_armors:shoes"
+  },
+  "type": "minecraft:crafting_shaped"
+}
