@@ -29,7 +29,7 @@
   "custom": {
     "modupdater": {
       "strategy": "curseforge",
-      "projectID": "694286",
+      "projectID": "783585",
       "strict": false
     },
     "modmenu": {
