@@ -1,52 +1,56 @@
 package net.rupyber_studios.fbi_swat_armors.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.EquipmentSlot;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.rupyber_studios.fbi_swat_armors.FbiSwatArmors;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Fbi0Item;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Fbi1Item;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Swat1Item;
 
 public class ModItems {
-    private static final FabricItemSettings settings = new FabricItemSettings().group(ModItemGroup.FBI_SWAT_ARMORS);
+    private static final FabricItemSettings settings = new FabricItemSettings();
 
     public static final Item SUNGLASSES = registerItem("sunglasses",
-            new Fbi0Item(ArmorMaterials.IRON, EquipmentSlot.HEAD,
+            new Fbi0Item(ArmorMaterials.IRON, ArmorItem.Type.HELMET,
                     settings));
     public static final Item FBI_JACKET = registerItem("fbi_jacket",
-            new Fbi0Item(ArmorMaterials.IRON, EquipmentSlot.CHEST,
+            new Fbi0Item(ArmorMaterials.IRON, ArmorItem.Type.CHESTPLATE,
                     settings));
     public static final Item FBI_BLUE_TROUSERS = registerItem("fbi_blue_trousers",
-            new Fbi0Item(ArmorMaterials.IRON, EquipmentSlot.LEGS,
+            new Fbi0Item(ArmorMaterials.IRON, ArmorItem.Type.LEGGINGS,
                     settings));
     public static final Item SHOES = registerItem("shoes",
-            new Fbi0Item(ArmorMaterials.IRON, EquipmentSlot.FEET,
+            new Fbi0Item(ArmorMaterials.IRON, ArmorItem.Type.BOOTS,
                     settings));
     public static final Item FBI_HELMET = registerItem("fbi_helmet",
-            new Fbi1Item(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD,
+            new Fbi1Item(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET,
                     settings));
     public static final Item FBI_BULLETPROOF_VEST = registerItem("fbi_bulletproof_vest",
-            new Fbi1Item(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST,
+            new Fbi1Item(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE,
                     settings));
     public static final Item FBI_GREEN_TROUSERS = registerItem("fbi_green_trousers",
-            new Fbi1Item(ArmorMaterials.IRON, EquipmentSlot.LEGS,
+            new Fbi1Item(ArmorMaterials.IRON, ArmorItem.Type.LEGGINGS,
                     settings));
     public static final Item SWAT_HELMET = registerItem("swat_helmet",
-            new Swat1Item(ArmorMaterials.DIAMOND, EquipmentSlot.HEAD,
+            new Swat1Item(ArmorMaterials.DIAMOND, ArmorItem.Type.HELMET,
                     settings));
     public static final Item SWAT_BULLETPROOF_VEST = registerItem("swat_bulletproof_vest",
-            new Swat1Item(ArmorMaterials.DIAMOND, EquipmentSlot.CHEST,
+            new Swat1Item(ArmorMaterials.DIAMOND, ArmorItem.Type.CHESTPLATE,
                     settings));
     public static final Item SWAT_TROUSERS = registerItem("swat_trousers",
-            new Swat1Item(ArmorMaterials.IRON, EquipmentSlot.LEGS,
+            new Swat1Item(ArmorMaterials.IRON, ArmorItem.Type.LEGGINGS,
                     settings));
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(FbiSwatArmors.MOD_ID, name), item);
+        Item registered = Registry.register(Registries.ITEM, new Identifier(FbiSwatArmors.MOD_ID, name), item);
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroups.FBI_SWAT_ARMORS).register(entries -> entries.add(registered));
+        return registered;
     }
 
     public static void registerModItems() {

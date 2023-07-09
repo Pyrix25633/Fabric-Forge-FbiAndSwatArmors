@@ -1,10 +1,11 @@
 package net.rupyber_studios.fbi_swat_armors;
 
 import net.fabricmc.api.ModInitializer;
+import net.rupyber_studios.fbi_swat_armors.item.ModItemGroups;
 import net.rupyber_studios.fbi_swat_armors.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import software.bernie.geckolib3.GeckoLib;
+import software.bernie.geckolib.GeckoLib;
 
 public class FbiSwatArmors implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -19,6 +20,8 @@ public class FbiSwatArmors implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
 
