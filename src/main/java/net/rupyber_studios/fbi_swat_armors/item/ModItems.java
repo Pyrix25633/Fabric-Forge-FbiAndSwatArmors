@@ -1,12 +1,13 @@
 package net.rupyber_studios.fbi_swat_armors.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterials;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.rupyber_studios.fbi_swat_armors.FbiSwatArmors;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Fbi0Item;
@@ -49,7 +50,7 @@ public class ModItems {
 
     private static Item registerItem(String name, Item item) {
         Item registered = Registry.register(Registries.ITEM, new Identifier(FbiSwatArmors.MOD_ID, name), item);
-        ItemGroupEvents.modifyEntriesEvent(ModItemGroups.FBI_SWAT_ARMORS).register(entries -> entries.add(registered));
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroups.FBI_SWAT_ARMORS).register(entries -> entries.add(item));
         return registered;
     }
 

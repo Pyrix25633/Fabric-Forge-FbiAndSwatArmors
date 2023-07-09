@@ -21,7 +21,7 @@ public class FbiSwatArmors implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		ModItemGroups.registerItemGroups();
+		ModItemGroups.buildItemGroups();
 
 		ModItems.registerModItems();
 
