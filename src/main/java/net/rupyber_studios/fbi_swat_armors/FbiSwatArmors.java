@@ -4,7 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +26,8 @@ public class FbiSwatArmors {
     public FbiSwatArmors() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItemGroup.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         GeckoLib.initialize();
@@ -41,8 +43,8 @@ public class FbiSwatArmors {
         
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == ModItemGroup.FBI_SWAT_ARMORS) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTab() == ModItemGroup.FBI_SWAT_ARMORS.get()) {
             for(Item i : ModItemGroup.FBI_SWAT_ARMORS_ITEMS) {
                 event.accept(i);
             }
