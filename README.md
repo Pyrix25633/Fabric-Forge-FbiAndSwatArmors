@@ -12,3 +12,5 @@ This is a Forge, Fabric and Quilt mod to add FBI and SWAT armors to Minecraft!
 ## [Installation](https://rupyberstudios.github.io/website/pages/installation)
 
 ## [The team](https://rupyberstudios.github.io/website/pages/about)
+
+## [Patreon](https://www.patreon.com/Pyrix25633ModsandSoftware)
