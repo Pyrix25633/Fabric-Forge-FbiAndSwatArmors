@@ -1,4 +1,4 @@
-# Minecraft Legends Mod
+# FBI And SWAT Armors
 
 ### *A mod by Rupyber Studios*
 
