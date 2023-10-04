@@ -1,7 +1,7 @@
 ---
-name: 'FSAS-XXX: Brief suggestion description'
-about: Suggest an idea for this project
-title: 'FSAS-XXX: Brief suggestion description'
+name: 'FBI And SWAT Armors Suggestion'
+about: 'Suggest an idea for this project'
+title: 'FSAS-<N>: <Brief suggestion description>'
 labels: "\U0001F4D6 open, \U0001FAA7 suggestion"
 assignees: Pyrix25633
 

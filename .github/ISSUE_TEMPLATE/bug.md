@@ -1,7 +1,7 @@
 ---
-name: 'FSAB-XXX: Brief bug description'
-about: Create a report to help us improve
-title: 'FSAB-XXX: Brief bug description'
+name: 'FBI And SWAT Armors Bug'
+about: 'Create a report to help us improve'
+title: 'FSAB-<N>: <Brief bug description>'
 labels: "\U0001F41B bug, \U0001F4D6 open"
 assignees: Pyrix25633
 
@@ -11,7 +11,7 @@ assignees: Pyrix25633
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the issue
+Steps to reproduce the issue.
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
