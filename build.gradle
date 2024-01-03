@@ -28,6 +28,8 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:${project.geckolib_version}"
+
+	include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.2.2")))
 }
 
 processResources {
