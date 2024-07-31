@@ -1,12 +1,13 @@
 # FBI And SWAT Armors
 
-### *A mod by Rupyber Studios*
+### *A mod by*
+![Rupyber Studios Logo](https://rupyberstudios.github.io/website/img/rupyber_studios.png)
 
-This is a Forge, Fabric and Quilt mod to add FBI and SWAT armors to Minecraft!
+Adds FBI and SWAT armors.
 
 ## Visit our [Website](https://rupyberstudios.github.io/website/)!
 
-![FBI And Swat Armors Logo](https://raw.githubusercontent.com/RupyberStudios/website/main/img/fbi_and_swat_armors_logo_small.png)
+![FBI And Swat Armors Logo](https://rupyberstudios.github.io/website/img/fbi_and_swat_armors.png)
 ![requires Fabric API](https://i.imgur.com/HabVZJR.png)
 
 ## [Installation](https://rupyberstudios.github.io/website/pages/installation)
