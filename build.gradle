@@ -1,16 +1,19 @@
 plugins {
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
     id 'org.spongepowered.mixin' version '0.7.+'
+    id "com.hypherionmc.modutils.modpublisher" version "2.1.5"
 }
 
 version = project.mod_version
 group = project.maven_group // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = project.archives_base_name
 
-// Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+base {
+    archivesName = project.archives_base_name
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
@@ -183,4 +186,58 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+publisher {
+    apiKeys {
+        modrinth System.getenv("MODRINTH_TOKEN")
+        curseforge System.getenv("CURSE_TOKEN")
+        github System.getenv("GITHUB_TOKEN")
+    }
+
+    setCurseID("783585")
+    setModrinthID("8TP2HioV")
+
+    setVersionType("release")
+
+    setChangelog(new File("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/changelog.md").text)
+
+    setProjectVersion("${project.semantic_version}-forge")
+
+    setDisplayName("FBI And SWAT Armors ${project.semantic_version}")
+
+    setGameVersions(project.minecraft_version)
+
+    setLoaders("forge")
+
+    setCurseEnvironment("both")
+
+    setIsManualRelease(false)
+
+    setArtifact("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/workspace/Fabric-Forge-FbiAndSwatArmors/build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+
+    setDisableMalwareScanner(true)
+
+    setJavaVersions(JavaVersion.VERSION_21, 21)
+
+    setDisableEmptyJarCheck(true)
+
+    github {
+        repo = "Pyrix25633/Fabric-Forge-FbiAndSwatArmors"
+        tag = "${project.semantic_version}-forge"
+        displayName = "FBI And SWAT Armors ${project.mod_version}"
+        createTag = true
+        createRelease = true
+        updateRelease = true
+        draft = false
+        target = "forge"
+    }
+
+    modrinthDepends {
+        required 'geckolib'
+    }
+
+    curseDepends {
+        required 'geckolib'
+    }
 }
