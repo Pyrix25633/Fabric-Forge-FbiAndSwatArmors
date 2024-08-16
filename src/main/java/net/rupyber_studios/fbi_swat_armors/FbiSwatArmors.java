@@ -5,7 +5,6 @@ import net.rupyber_studios.fbi_swat_armors.item.ModItemGroups;
 import net.rupyber_studios.fbi_swat_armors.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import software.bernie.geckolib.GeckoLib;
 
 public class FbiSwatArmors implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -24,8 +23,6 @@ public class FbiSwatArmors implements ModInitializer {
 		ModItemGroups.buildItemGroups();
 
 		ModItems.registerModItems();
-
-		GeckoLib.initialize();
 
 		LOGGER.info("Hello Fabric world!");
 	}

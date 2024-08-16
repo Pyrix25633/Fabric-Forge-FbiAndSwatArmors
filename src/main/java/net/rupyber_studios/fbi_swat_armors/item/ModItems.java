@@ -1,21 +1,22 @@
 package net.rupyber_studios.fbi_swat_armors.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.rupyber_studios.fbi_swat_armors.FbiSwatArmors;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Fbi0Item;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Fbi1Item;
 import net.rupyber_studios.fbi_swat_armors.item.custom.Swat1Item;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModItems {
-    private static final FabricItemSettings settings = new FabricItemSettings();
+    public static final List<Item> ALL = new ArrayList<>();
+
+    private static final Item.Settings settings = new Item.Settings();
 
     public static final Item SUNGLASSES = registerItem("sunglasses",
             new Fbi0Item(ArmorMaterials.IRON, ArmorItem.Type.HELMET,
@@ -49,6 +50,7 @@ public class ModItems {
                     settings));
 
     private static Item registerItem(String name, Item item) {
+        ALL.add(item);
         Item registered = Registry.register(Registries.ITEM, new Identifier(FbiSwatArmors.MOD_ID, name), item);
         ItemGroupEvents.modifyEntriesEvent(ModItemGroups.FBI_SWAT_ARMORS).register(entries -> entries.add(item));
         return registered;

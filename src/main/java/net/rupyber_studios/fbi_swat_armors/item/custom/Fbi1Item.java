@@ -3,60 +3,80 @@ package net.rupyber_studios.fbi_swat_armors.item.custom;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.rupyber_studios.fbi_swat_armors.entity.client.armor.Fbi1Renderer;
+import net.rupyber_studios.fbi_swat_armors.item.ModItems;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.animatable.client.RenderProvider;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.*;
-import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.animatable.client.GeoRenderProvider;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.constant.DefaultAnimations;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
-public class Fbi1Item extends ArmorItem implements GeoItem {
-    private final AnimatableInstanceCache factory = new SingletonAnimatableInstanceCache(this);
-    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
+public class Fbi1Item extends ArmorItem implements GeoItem, Armor {
+    private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    public Fbi1Item(ArmorMaterial material, Type type, Settings settings) {
+    public Fbi1Item(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);
     }
 
-    private PlayState predicate(AnimationState<Fbi1Item> state) {
-        state.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
-        return PlayState.CONTINUE;
+    @Override
+    public List<String> getPattern() {
+        if(this == ModItems.FBI_HELMET) return List.of("###", "#G#");
+        if(this == ModItems.FBI_BULLETPROOF_VEST) return List.of("#G#", "###", "###");
+        if(this == ModItems.FBI_GREEN_TROUSERS) return List.of("###", "#G#", "X X");
+        return List.of();
     }
 
     @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controller", 20, this::predicate));
+    public Map<Character, ItemConvertible> getInputs() {
+        Map<Character, ItemConvertible> inputs = new HashMap<>();
+        inputs.put('G', Items.GREEN_DYE);
+        if(this == ModItems.FBI_HELMET || this == ModItems.FBI_BULLETPROOF_VEST)
+            inputs.put('#', Items.DIAMOND);
+        else if(this == ModItems.FBI_GREEN_TROUSERS) {
+            inputs.put('#', Items.IRON_INGOT);
+            inputs.put('X', Items.IRON_NUGGET);
+        }
+        return inputs;
     }
 
     @Override
-    public AnimatableInstanceCache getAnimatableInstanceCache() {
-        return factory;
-    }
-
-    @Override
-    public void createRenderer(Consumer<Object> consumer) {
-        consumer.accept(new RenderProvider() {
+    public void createGeoRenderer(@NotNull Consumer<GeoRenderProvider> consumer) {
+        consumer.accept(new GeoRenderProvider() {
             private Fbi1Renderer renderer;
 
             @Override
-            public BipedEntityModel<LivingEntity> getHumanoidArmorModel(LivingEntity entity, ItemStack stack,
-                                                                        EquipmentSlot slot, BipedEntityModel<LivingEntity> original) {
-                if(renderer == null) renderer = new Fbi1Renderer();
-                renderer.prepForRender(entity, stack, slot, original);
-                return renderer;
+            public <T extends LivingEntity> @NotNull BipedEntityModel<?> getGeoArmorRenderer(@Nullable T livingEntity,
+                                                                                             ItemStack itemStack,
+                                                                                             @Nullable EquipmentSlot equipmentSlot,
+                                                                                             @Nullable BipedEntityModel<T> original) {
+                if(this.renderer == null)
+                    this.renderer = new Fbi1Renderer();
+                return this.renderer;
             }
         });
     }
 
     @Override
-    public Supplier<Object> getRenderProvider() {
-        return renderProvider;
+    public void registerControllers(AnimatableManager.@NotNull ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, 20, state -> {
+            state.setAnimation(DefaultAnimations.IDLE);
+            return PlayState.CONTINUE;
+        }));
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return this.cache;
     }
 }

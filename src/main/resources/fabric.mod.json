@@ -24,6 +24,9 @@
     ],
     "client": [
       "net.rupyber_studios.fbi_swat_armors.FbiSwatArmorsClient"
+    ],
+    "fabric-datagen": [
+      "net.rupyber_studios.fbi_swat_armors.FbiSwatArmorsDataGenerator"
     ]
   },
   "custom": {
@@ -42,13 +45,13 @@
     "fbi_swat_armors.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.3",
+    "fabricloader": ">=0.15.11",
     "fabric-api": "*",
-    "minecraft": "1.20.4",
-    "geckolib": ">=4.2.1",
-    "java": ">=17"
+    "minecraft": "1.20.6",
+    "geckolib": ">=4.5.4",
+    "java": ">=21"
   },
   "suggests": {
-    "another-mod": "create"
+    "another-mod": "*"
   }
 }
