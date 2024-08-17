@@ -96,7 +96,7 @@ publisher {
 
 	setChangelog(new File("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/changelog.md").text)
 
-	setProjectVersion(project.semantic_version)
+	setProjectVersion("${project.semantic_version}-fabric")
 
 	setDisplayName("FBI And SWAT Armors ${project.semantic_version}")
 
