@@ -104,7 +104,7 @@ publisher {
 
 	setLoaders("fabric", "quilt")
 
-	setCurseEnvironment("server")
+	setCurseEnvironment("both")
 
 	setIsManualRelease(false)
 

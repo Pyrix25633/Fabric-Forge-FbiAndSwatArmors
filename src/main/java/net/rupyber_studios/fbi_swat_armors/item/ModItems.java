@@ -51,7 +51,7 @@ public class ModItems {
 
     private static Item registerItem(String name, Item item) {
         ALL.add(item);
-        Item registered = Registry.register(Registries.ITEM, new Identifier(FbiSwatArmors.MOD_ID, name), item);
+        Item registered = Registry.register(Registries.ITEM, Identifier.of(FbiSwatArmors.MOD_ID, name), item);
         ItemGroupEvents.modifyEntriesEvent(ModItemGroups.FBI_SWAT_ARMORS).register(entries -> entries.add(item));
         return registered;
     }

@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 import net.rupyber_studios.fbi_swat_armors.FbiSwatArmors;
 
 public class ModItemGroups {
-    private static final Identifier FBI_SWAT_ARMORS_ID = new Identifier(FbiSwatArmors.MOD_ID, "fbi_swat_armors");
+    private static final Identifier FBI_SWAT_ARMORS_ID = Identifier.of(FbiSwatArmors.MOD_ID, "fbi_swat_armors");
     public static final RegistryKey<ItemGroup> FBI_SWAT_ARMORS = RegistryKey.of(RegistryKeys.ITEM_GROUP, FBI_SWAT_ARMORS_ID);
 
     public static void buildItemGroups() {

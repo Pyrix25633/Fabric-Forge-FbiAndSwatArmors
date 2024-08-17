@@ -33,7 +33,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                Map<Character, ItemConvertible> inputs) {
         ShapedRecipeJsonBuilder builder = ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, armor)
                 .group("fbi_and_swat");
-        System.out.println(armor);
         for(String line : pattern)
             builder.pattern(line);
         for(char c : inputs.keySet()) {
