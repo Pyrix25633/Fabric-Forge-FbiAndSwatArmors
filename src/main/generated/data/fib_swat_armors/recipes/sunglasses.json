@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fbi_and_swat",
+  "key": {
+    "#": {
+      "item": "minecraft:black_stained_glass"
+    },
+    "X": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "#X#"
+  ],
+  "result": {
+    "item": "fbi_swat_armors:sunglasses"
+  }
+}

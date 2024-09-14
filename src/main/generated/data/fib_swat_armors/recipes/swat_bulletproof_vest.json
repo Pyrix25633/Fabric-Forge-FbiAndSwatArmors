@@ -1,7 +1,10 @@
 {
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fbi_and_swat",
   "key": {
     "#": {
-      "item": "create:sturdy_sheet"
+      "item": "minecraft:diamond"
     },
     "B": {
       "item": "minecraft:black_dye"
@@ -14,7 +17,5 @@
   ],
   "result": {
     "item": "fbi_swat_armors:swat_bulletproof_vest"
-  },
-  "type": "minecraft:crafting_shaped",
-  "group": "swat1"
+  }
 }

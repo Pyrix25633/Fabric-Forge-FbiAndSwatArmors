@@ -1,13 +1,16 @@
 {
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fbi_and_swat",
   "key": {
     "#": {
       "item": "minecraft:iron_ingot"
     },
-    "X": {
-      "item": "create:iron_sheet"
-    },
     "B": {
       "item": "minecraft:blue_dye"
+    },
+    "X": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
@@ -17,7 +20,5 @@
   ],
   "result": {
     "item": "fbi_swat_armors:fbi_blue_trousers"
-  },
-  "type": "minecraft:crafting_shaped",
-  "group": "fbi0"
+  }
 }
