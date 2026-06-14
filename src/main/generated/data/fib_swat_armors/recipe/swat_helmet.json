@@ -3,12 +3,8 @@
   "category": "equipment",
   "group": "fbi_and_swat",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "B": {
-      "item": "minecraft:black_dye"
-    }
+    "#": "minecraft:diamond",
+    "B": "minecraft:black_dye"
   },
   "pattern": [
     "###",

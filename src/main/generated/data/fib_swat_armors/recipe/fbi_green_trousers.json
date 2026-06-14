@@ -3,15 +3,9 @@
   "category": "equipment",
   "group": "fbi_and_swat",
   "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    },
-    "G": {
-      "item": "minecraft:green_dye"
-    },
-    "X": {
-      "item": "minecraft:iron_nugget"
-    }
+    "#": "minecraft:iron_ingot",
+    "G": "minecraft:green_dye",
+    "X": "minecraft:iron_nugget"
   },
   "pattern": [
     "###",

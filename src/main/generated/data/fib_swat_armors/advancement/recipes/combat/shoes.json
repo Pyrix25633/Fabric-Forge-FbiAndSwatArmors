@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fbi_swat_armors:shoes"
+        "recipe": "fib_swat_armors:shoes"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -48,7 +48,7 @@
   ],
   "rewards": {
     "recipes": [
-      "fbi_swat_armors:shoes"
+      "fib_swat_armors:shoes"
     ]
   }
 }
