@@ -1,31 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blue_dye": {
+    "has_diamond": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:blue_dye"
+            "items": "minecraft:diamond"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_iron_ingot": {
+    "has_green_dye": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:iron_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_iron_nugget": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:iron_nugget"
+            "items": "minecraft:green_dye"
           }
         ]
       },
@@ -33,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fib_swat_armors:fbi_blue_trousers"
+        "recipe": "fbi_swat_armors:fbi_bulletproof_vest"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,14 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blue_dye",
-      "has_iron_ingot",
-      "has_iron_nugget"
+      "has_diamond",
+      "has_green_dye"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fib_swat_armors:fbi_blue_trousers"
+      "fbi_swat_armors:fbi_bulletproof_vest"
     ]
   }
 }

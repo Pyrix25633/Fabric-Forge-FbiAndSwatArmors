@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_stained_glass": {
+    "has_diamond": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:black_stained_glass"
+            "items": "minecraft:diamond"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_iron_nugget": {
+    "has_green_dye": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:iron_nugget"
+            "items": "minecraft:green_dye"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fib_swat_armors:sunglasses"
+        "recipe": "fbi_swat_armors:fbi_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_black_stained_glass",
-      "has_iron_nugget"
+      "has_diamond",
+      "has_green_dye"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fib_swat_armors:sunglasses"
+      "fbi_swat_armors:fbi_helmet"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "fib_swat_armors",
+  "id": "fbi_swat_armors",
   "version": "${version}",
   "name": "FBI And SWAT Armors",
   "description": "This is a Forge, Fabric and Quilt mod to add three armor sets about FBI and SWAT!",

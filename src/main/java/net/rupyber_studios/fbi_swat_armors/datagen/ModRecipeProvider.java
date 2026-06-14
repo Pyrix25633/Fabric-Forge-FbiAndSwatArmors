@@ -56,8 +56,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 }
 
                 Identifier itemId = Registries.ITEM.getId(armor);
-                RegistryKey<Recipe<?>> recipeKey = RegistryKey.of(RegistryKeys.RECIPE,
-                        Identifier.of(ModRecipeProvider.this.output.getModId(), itemId.getPath()));
+                RegistryKey<Recipe<?>> recipeKey = RegistryKey.of(RegistryKeys.RECIPE, itemId);
                 builder.offerTo(exporter, recipeKey);
             }
         };
