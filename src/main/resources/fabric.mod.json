@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "fib_swat_armors",
+  "id": "fbi_swat_armors",
   "version": "${version}",
   "name": "FBI And SWAT Armors",
   "description": "This is a Forge, Fabric and Quilt mod to add three armor sets about FBI and SWAT!",
@@ -45,10 +45,10 @@
     "fbi_swat_armors.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.11",
+    "fabricloader": ">=0.19.3",
     "fabric-api": "*",
-    "minecraft": "1.21.1",
-    "geckolib": ">=4.5.8",
+    "minecraft": "1.21.11",
+    "geckolib": ">=5.4.5",
     "java": ">=21"
   },
   "suggests": {

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fbi_and_swat",
+  "key": {
+    "#": "minecraft:diamond",
+    "G": "minecraft:green_dye"
+  },
+  "pattern": [
+    "###",
+    "#G#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fbi_swat_armors:fbi_helmet"
+  }
+}

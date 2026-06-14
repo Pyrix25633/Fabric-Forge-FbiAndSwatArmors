@@ -3,20 +3,15 @@
   "category": "equipment",
   "group": "fbi_and_swat",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "G": {
-      "item": "minecraft:green_dye"
-    }
+    "#": "minecraft:diamond",
+    "B": "minecraft:black_dye"
   },
   "pattern": [
-    "#G#",
     "###",
-    "###"
+    "#B#"
   ],
   "result": {
     "count": 1,
-    "id": "fbi_swat_armors:fbi_bulletproof_vest"
+    "id": "fbi_swat_armors:swat_helmet"
   }
 }

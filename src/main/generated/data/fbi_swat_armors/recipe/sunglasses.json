@@ -3,12 +3,8 @@
   "category": "equipment",
   "group": "fbi_and_swat",
   "key": {
-    "#": {
-      "item": "minecraft:black_stained_glass"
-    },
-    "X": {
-      "item": "minecraft:iron_nugget"
-    }
+    "#": "minecraft:black_stained_glass",
+    "X": "minecraft:iron_nugget"
   },
   "pattern": [
     "#X#"
