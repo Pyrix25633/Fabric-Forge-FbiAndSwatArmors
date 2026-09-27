@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_green_dye": {
+    "has_black_dye": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:green_dye"
+            "items": "minecraft:black_dye"
           }
         ]
       },
@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fbi_swat_armors:fbi_green_trousers"
+        "recipes": "fbi_swat_armors:shoes"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -41,14 +41,14 @@
   "requirements": [
     [
       "has_the_recipe",
+      "has_black_dye",
       "has_iron_ingot",
-      "has_green_dye",
       "has_iron_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
-      "fbi_swat_armors:fbi_green_trousers"
+      "fbi_swat_armors:shoes"
     ]
   }
 }

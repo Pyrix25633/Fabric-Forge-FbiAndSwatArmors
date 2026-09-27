@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fbi_swat_armors:fbi_blue_trousers"
+        "recipes": "fbi_swat_armors:fbi_blue_trousers"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

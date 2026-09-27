@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "fbi_swat_armors:fbi_bulletproof_vest"
+        "recipes": "fbi_swat_armors:fbi_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "fbi_swat_armors:fbi_bulletproof_vest"
+      "fbi_swat_armors:fbi_helmet"
     ]
   }
 }
