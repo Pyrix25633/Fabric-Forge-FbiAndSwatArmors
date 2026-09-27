@@ -3,7 +3,7 @@
   "id": "fbi_swat_armors",
   "version": "${version}",
   "name": "FBI And SWAT Armors",
-  "description": "This is a Forge, Fabric and Quilt mod to add three armor sets about FBI and SWAT!",
+  "description": "Adds FBI and SWAT armor sets for Minecraft 26.3.",
   "authors": [
     "Rupyber Studios",
     "Pyrix25633",
@@ -21,12 +21,6 @@
   "entrypoints": {
     "main": [
       "net.rupyber_studios.fbi_swat_armors.FbiSwatArmors"
-    ],
-    "client": [
-      "net.rupyber_studios.fbi_swat_armors.FbiSwatArmorsClient"
-    ],
-    "fabric-datagen": [
-      "net.rupyber_studios.fbi_swat_armors.FbiSwatArmorsDataGenerator"
     ]
   },
   "custom": {
@@ -41,17 +35,11 @@
       }
     }
   },
-  "mixins": [
-    "fbi_swat_armors.mixins.json"
-  ],
   "depends": {
-    "fabricloader": ">=0.19.3",
+    "fabricloader": ">=0.19.5",
     "fabric-api": "*",
-    "minecraft": "1.21.11",
-    "geckolib": ">=5.4.5",
-    "java": ">=21"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "26.3",
+    "geckolib": ">=5.5.7",
+    "java": ">=25"
   }
 }

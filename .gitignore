@@ -31,3 +31,6 @@ bin/
 # fabric
 
 run/
+neoforge/.gradle/
+neoforge/build/
+neoforge/run/
