@@ -119,7 +119,7 @@ publisher {
 	github {
 		repo = "Pyrix25633/Fabric-Forge-FbiAndSwatArmors"
 		tag = "${project.semantic_version}-fabric"
-		displayName = "FBI And SWAT Armors ${project.minecraft_version}-${project.semantic_version}"
+		displayName = "FBI And SWAT Armors ${project.mod_version}"
 		createTag = true
 		createRelease = true
 		updateRelease = true
