@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.147'
-    id 'com.hypherionmc.modutils.modpublisher' version '2.1.5'
+    id 'com.hypherionmc.modutils.modpublisher' version '2.1.8'
 }
 
 version = project.mod_version
@@ -44,7 +44,8 @@ dependencies {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        create("mavenJava", MavenPublication) {
+            artifactId = project.archives_base_name
             from components.java
         }
     }
@@ -72,8 +73,7 @@ publisher {
 
     setVersionType("release")
 
-    def changelogFile = new File("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/changelog.md")
-    setChangelog(changelogFile.exists() ? changelogFile.text : "")
+    setChangelog(new File("${project.rootDir}/changelog.md").text)
 
     setProjectVersion("${project.semantic_version}-neoforge")
 
@@ -87,7 +87,7 @@ publisher {
 
     setIsManualRelease(false)
 
-    setArtifact("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/workspace/Fabric-Forge-FbiAndSwatArmors/build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+    setArtifact("${project.rootDir}/build/libs/${project.archives_base_name}-${project.mod_version}.jar")
 
     setDisableMalwareScanner(true)
 
@@ -103,7 +103,7 @@ publisher {
         createRelease = true
         updateRelease = true
         draft = false
-        target = "forge"
+        target = "neoforge"
     }
 
     modrinthDepends {
