@@ -1,0 +1,33 @@
+license="GPL-3.0"
+
+[[mods]]
+modId="fbi_swat_armors"
+version="26.3-1.0.4-neoforge"
+displayName="FBI And SWAT Armors"
+displayURL="https://rupyberstudios.github.io/website/"
+iconFile="icon.png"
+authors="Rupyber Stydios, Pyrix25633 and Ruken"
+description='''
+This is a Forge, Fabric and Quilt mod to add three armor sets about FBI and SWAT!
+'''
+
+[[dependencies.fbi_swat_armors]]
+modId="neoforge"
+type="required"
+versionRange="[26.3.0.23-beta,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.fbi_swat_armors]]
+modId="minecraft"
+type="required"
+versionRange="[26.3]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.fbi_swat_armors]]
+modId="geckolib"
+type="required"
+versionRange="[5.5.7,)"
+ordering="NONE"
+side="BOTH"
