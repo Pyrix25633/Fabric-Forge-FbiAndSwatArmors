@@ -1,9 +1,8 @@
 plugins {
-	id 'net.fabricmc.fabric-loom' version '1.18.2'
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
 	id 'maven-publish'
-	id "com.hypherionmc.modutils.modpublisher" version "2.1.5"
+	id "com.hypherionmc.modutils.modpublisher" version "2.1.8"
 }
-
 
 version = project.mod_version
 group = project.maven_group
@@ -18,7 +17,18 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
-	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+	maven { url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"fabric_tps" {
+			sourceSet sourceSets.main
+		}
+	}
+
 }
 
 dependencies {
@@ -33,9 +43,15 @@ dependencies {
 
 processResources {
 	inputs.property "version", project.version
+	inputs.property "loader_version", project.loader_version
+	inputs.property "fabric_version", project.fabric_version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": project.version
+		expand([
+				"version": project.version,
+				"loader_version": project.loader_version,
+				"fabric_version": project.fabric_version,
+		])
 	}
 }
 
@@ -89,8 +105,7 @@ publisher {
 
 	setVersionType("release")
 
-	def changelogFile = new File("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/changelog.md")
-	setChangelog(changelogFile.exists() ? changelogFile.text : "")
+	setChangelog(new File("${project.rootDir}/changelog.md").text)
 
 	setProjectVersion("${project.semantic_version}-fabric")
 
@@ -104,11 +119,11 @@ publisher {
 
 	setIsManualRelease(false)
 
-	setArtifact("/media/pyrix25633/Drive/mods/FbiAndSwatArmors/workspace/Fabric-Forge-FbiAndSwatArmors/build/libs/${project.archives_base_name}-${project.mod_version}.jar")
+	setArtifact("${project.rootDir}/build/libs/${project.archives_base_name}-${project.mod_version}.jar")
 
 	setDisableMalwareScanner(true)
 
-	setJavaVersions(JavaVersion.VERSION_21, 21)
+	setJavaVersions(JavaVersion.VERSION_25, 25)
 
 	setDisableEmptyJarCheck(true)
 
